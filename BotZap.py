@@ -17,12 +17,14 @@ while True:
     while len(janela.find_elements(By.ID, 'side')) < 1:
         pass
 
-    pyautogui.sleep(30)
-   
-    janela.find_element(By.XPATH, '//*[@id="side"]/div[1]/div/div[2]/div[2]/div/div[1]/p').send_keys('Anotações')
-    pyautogui.sleep(5)
+   # Seleciona o contato ou grupo na barra de pesquisa;
+    
+    janela.find_element(By.XPATH, '//*[@id="side"]/div[1]/div/div[2]/div[2]/div/div[1]/p').send_keys('NOME DO DESTINATARIO')
+    pyautogui.sleep(2)
     pyautogui.press('enter')
-    pyautogui.sleep(5)
+
+    # Escreva a mensagem a ser enviada
+    
     while True:
          janela.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[1]/p').send_keys('TESTE')
          pyautogui.press('enter')
